@@ -4,7 +4,7 @@ export class DateTime{
     #date;
     constructor(date = new Date()){
         const parsedDate = date instanceof Date ? date : new Date(date);
-        if (isNan(parsedDate.getTime()))
+        if (isNaN(parsedDate.getTime()))
             throw new ValidationError('Invalid date format: ${parsedDate}');
         this.#date = parsedDate;
     }
