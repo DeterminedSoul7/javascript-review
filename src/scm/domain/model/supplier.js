@@ -6,7 +6,7 @@ export class Supplier {
     #contactEmail;
     #lastOrderTotalPrice;
 
-    //Aqui debemos comprobar que se cumplan las invariants (reglas de negocio)
+    //Aqui comprobamos que se cumplan las invariants (reglas de negocio)
     constructor({ id, name, contactEmail = null, lastOrderTotalPrice = null}) {
         if (!(id instanceof SupplierId))
             throw new ValidationError('Supplier Id must be a valid SupplierId object');
