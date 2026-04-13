@@ -1,4 +1,4 @@
-import {generateUuid} from "./uuid.js";
+import {generateUuid, validateUuid} from "./uuid.js";
 import {ValidationError} from "./errors.js";
 export class ProductId{
     #value;
@@ -14,6 +14,6 @@ export class ProductId{
     get value () {return this.#value;}
 
     equals(other){
-        return other instanceof ProductId && this.#value === other.amount;
+        return other instanceof ProductId && this.#value === other.value;
     }
 }
