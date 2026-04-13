@@ -4,7 +4,6 @@ export class DateTime{
     #date;
     constructor(date = new Date()){
         const parsedDate = date instanceof Date ? date : new Date(date);
-        if (isNaN(parsedDate.getTime()))
             throw new ValidationError('Invalid date format: ${parsedDate}');
         this.#date = parsedDate;
     }
@@ -20,7 +19,6 @@ export class DateTime{
     toString(){
         let options = { year: 'numeric', month: 'long', day: 'numeric',
         hour: '2-digit', minute: '2-digit', hour12:true};
-        return this.#date.toLocaleDateString('en-US, options');
     }
 
     equals(other){
