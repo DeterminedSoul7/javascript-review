@@ -1,4 +1,4 @@
-import { v4 as uuid, validate as uuidValidate } from "uuid";
+import { v4 as uuidv4, validate as uuidValidate } from "uuid";
 
 export function generateUuid() {
     return uuidv4();
